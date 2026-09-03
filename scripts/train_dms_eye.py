@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Train the initial DMS eye-state baseline on the portable V2 manifest."""
+"""Train the initial DMS eye-state baseline on the versioned manifest."""
 
 from __future__ import annotations
 
@@ -20,7 +20,8 @@ from torchvision.models import MobileNet_V2_Weights, mobilenet_v2
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_MANIFEST = ROOT / "manifests/dms_eye_state.csv"
+DATASET_ROOT = ROOT / "datasets/v3.0"
+DEFAULT_MANIFEST = DATASET_ROOT / "manifests/dms_eye_state.csv"
 DEFAULT_OUTPUT = ROOT / "runs/dms_eye_mobilenetv2"
 CLASS_TO_ID = {"closed": 0, "open": 1}
 
@@ -49,7 +50,7 @@ class ManifestDataset(Dataset):
             value = row.get("image_rel") or row.get("image_path") or ""
             path = Path(value)
             if not path.is_absolute():
-                path = ROOT / path
+                path = DATASET_ROOT / path
             class_name = row.get("class_name", "")
             if class_name not in CLASS_TO_ID:
                 raise ValueError("Unsupported DMS class: {}".format(class_name))

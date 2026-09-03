@@ -1,10 +1,10 @@
-path: /data/ZJC/智能三轮车/datasets_v3.0
+path: ..
 train:
-  - data/fcw/images/bdd100k/train
-  - data/fcw/images/nuscenes_mini/train
+  - datasets/v3.0/fcw/images/bdd100k/train
+  - datasets/v3.0/fcw/images/nuscenes_mini/train
 val:
-  - data/fcw/images/bdd100k/val
-  - data/fcw/images/nuscenes_mini/val
+  - datasets/v3.0/fcw/images/bdd100k/val
+  - datasets/v3.0/fcw/images/nuscenes_mini/val
 names:
   0: person
   1: rider

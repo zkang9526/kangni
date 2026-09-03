@@ -1,14 +1,3 @@
-# 训练权重和运行结果
-runs/
-weights/*.pt
-!weights/README.md
-
-# 数据集（太大不上传）
-data/
-*.jpg
-*.png
-*.jpeg
-
 # Python
 __pycache__/
 *.py[cod]
@@ -22,6 +11,24 @@ build/
 venv/
 ENV/
 
+# Training outputs and model artifacts
+runs/
+weights/*.pt
+!weights/README.md
+*.pt
+*.pth
+*.onnx
+*.engine
+*.log
+yolo*.pt
+
+# Datasets (too large for git)
+data/
+/datasets/
+*.jpg
+*.png
+*.jpeg
+
 # Jupyter
 .ipynb_checkpoints/
 
@@ -32,22 +39,20 @@ ENV/
 *.swo
 *~
 
-# 系统文件
+# System files
 .DS_Store
 Thumbs.db
 
-# 临时文件
+# Temporary files
 *.tmp
 *.bak
-*.log
 temp_test.jpg
 
-# 评估结果
+# Evaluation results
 evaluation_results/
 
-# 大文件
+# Archives
 *.tar
 *.gz
 *.zip
 *.rar
-yolo*.pt
