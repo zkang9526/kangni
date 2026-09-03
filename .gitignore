@@ -1,0 +1,22 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Training outputs and model artifacts
+runs/
+*.pt
+*.pth
+*.onnx
+*.engine
+*.log
+
+# Local datasets (too large for this Git repository)
+/datasets/
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
