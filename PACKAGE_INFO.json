@@ -1,0 +1,28 @@
+{
+  "package_name": "datasets_v3.0",
+  "generated": "2026-09-01",
+  "portable": true,
+  "reparse_points_in_data": 0,
+  "file_count_in_data": 268569,
+  "uncompressed_size_gib": 5.927,
+  "included": {
+    "fcw_bdd100k": {"train_images": 70000, "val_images": 10000, "train_labels": 69863, "val_labels": 10000},
+    "fcw_nuscenes_mini": {"frames": 404, "objects": 3960, "within_10m": 267},
+    "dms_mrl_eye": {"images": 84898, "subjects": 37},
+    "dms_nthu_subset": {"images": 18000, "subjects": 4, "role": "weak_auxiliary"},
+    "dms_sviro": {"images": 5000, "classes": 7, "role": "synthetic_pretrain"}
+  },
+  "excluded": [
+    "source archives and duplicate raw directories",
+    "YawDD videos pending temporal frame annotation",
+    "synthetic geometric seatbelt workflow-test images"
+  ],
+  "integrity_command": "python scripts/verify_package.py",
+  "v4_status": "baseline_training_ready_but_not_full_v4_acceptance",
+  "v4_missing": [
+    "project 166-degree fisheye IR camera domain",
+    "independent continuous head-down annotations",
+    "real child seatbelt and physical sensor synchronized truth",
+    "project camera-radar association and road acceptance evidence"
+  ]
+}

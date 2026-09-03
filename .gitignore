@@ -1,0 +1,53 @@
+# 训练权重和运行结果
+runs/
+weights/*.pt
+!weights/README.md
+
+# 数据集（太大不上传）
+data/
+*.jpg
+*.png
+*.jpeg
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 临时文件
+*.tmp
+*.bak
+*.log
+temp_test.jpg
+
+# 评估结果
+evaluation_results/
+
+# 大文件
+*.tar
+*.gz
+*.zip
+*.rar
+yolo*.pt

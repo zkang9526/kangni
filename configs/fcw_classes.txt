@@ -1,0 +1,9 @@
+person
+rider
+car
+truck
+bus
+train
+motor
+bike
+obstacle
